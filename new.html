@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>razat</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<div class="pic">
+		<img class="photo" src="2.JPG" alt="ANONYMUS">
+		<p class="quotes"> "Justice. Every man loves justice at another man's expense."</p>
+		
+	
+<!-- nav bar below -->
+	<br>
+	<div class= "nav">
+		<a class ="navbar" href="#help">HELP</a>
+		<a class href="#contact">CONTACT</a>
+	</div>
+<br>
+
+	<!-- form element below -->
+
+	<div class="form">
+		<form action="insert.php" method="POST">
+			<label>EMAIL: &nbsp &nbsp &nbsp &nbsp &nbsp</label><input type="email" name="email"  placeholder="EMAIL" required=""> <br><br>
+			<label>PASSWORD: &nbsp</label><input type="password" name="password" placeholder="********" required=""> <br><br>
+			<button type="submit"> LOG IN</button>
+			
+
+		</form>
+	</div>
+	</div>
+<br>
+	<h1>My Words </h1>
+	<div class="intro">
+				<p id ="demo" class="text"> "Go placidly amid the noise and the haste, and remember what peace there may be in silence. As far as possible without surrender, be on good terms with all persons. Speak your truth quietly and clearly, and listen to others, even the dull and ignorant; they too have their story. Be yourself. Especially do not feign affection. Neither be cynical about love – for in the face of all aridity and disenchantment it is perennial as the grass. Take kindly the counsel of the years, gracefully surrendering the things of youth. Nurture strength of spirit to shield you from misfortune. But do not distress yourself with imaginings. Many fears are born of fatigue and loneliness. Beyond a wholesome discipline, be gentle with yourself. You are a child of the universe no less than the trees and the stars; you have a right to be here. And whether or not it is clear to you, no doubt the universe is unfolding as it should. Therefore be at peace with God, whatever you conceive Him to be, and whatever your labours and aspirations, in the noisy confusion of life keep peace with your soul. With all its sham, drudgery and broken dreams, it is still a beautiful world."</p>
+		
+	</div>
+
+	<button onclick="myFunction()">HIDE IT</button>
+
+
+
+<script>
+function myFunction() {
+	var x =
+  document.getElementById("demo");
+  if (x.style.display == "none") {
+  	x.style.display =="block";
+  } else {
+  	x.style.display ="none";
+  }
+}
+</script>
+<br>
+	<div class="copyright">
+		<p>&copy; Anony.mr.azat</p>
+	</div>
+	<!-- <div class="table">
+		<table>
+			<tr>
+				<th>SN</th>
+				<th>NAME</th>
+				<th>ADDRESS</th>
+			</tr>
+						
+			<?php 
+        include 'connect.php';
+        $sql ="SELECT * FROM anony";
+
+        $result = mysqli_query ($conn, $sql);
+
+        if ($result) {
+            while ($row =mysqli_fetch_assoc($result)){
+                $id = $row ['id'];
+                $name = $row['name'];
+                $address = $row['address'];
+        ?>
+                <tr>
+                <td><?php echo $id ?></td>
+                <td><?php echo $name ?></td>
+                <td><?php echo $address ?></td>
+                
+                </tr>
+            
+        <?php
+            }
+        }
+         ?>
+		</table>
+
+
+	</div> -->
+
+</body>
+</html>
